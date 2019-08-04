@@ -34,11 +34,11 @@ Some important arguments:
 
 Baselines:  
 
-  - `UTM` proposed in [User conditional hashtag prediction for images.](http://www.thespermwhale.com/jaseweston/papers/imagetags.pdf), SIG KDD2015. 
-  - `ConTagNet` proposed in [ConTagNet: Exploiting usercontext for image tag recommendation.
+  - `UTM` proposed in [User conditional hashtag prediction for images](http://www.thespermwhale.com/jaseweston/papers/imagetags.pdf), SIG KDD2015. 
+  - `ConTagNet` proposed in [ConTagNet: Exploiting usercontext for image tag recommendation
 ](https://www.researchgate.net/publication/308855153_ConTagNet_Exploiting_User_Context_for_Image_Tag_Recommendation), ACM MM2016. 
-  - `CSMN` proposed in [Attend to You: Personalized Image Captioning with Context Sequence Memory Networks.](http://zpascal.net/cvpr2017/Park_Attend_to_You_CVPR_2017_paper.pdf), CVPR2017.
-  - `USHM` proposed in [Separating self-expression and visual content in hashtag supervision.](https://arxiv.org/abs/1711.09825), CVPR2018. 
+  - `CSMN` proposed in [Attend to You: Personalized Image Captioning with Context Sequence Memory Networks](http://zpascal.net/cvpr2017/Park_Attend_to_You_CVPR_2017_paper.pdf), CVPR2017.
+  - `USHM` proposed in [Separating self-expression and visual content in hashtag supervision](https://arxiv.org/abs/1711.09825), CVPR2018. 
 ## Dataset
 We provide two processed datasets: YFCC100M and Instagram.  
 - You can find the full version of dataset via [YFCC100M](https://multimediacommons.wordpress.com/yfcc100m-core-dataset/) and raw data [Instagram]().
