@@ -50,8 +50,8 @@ We provide two processed datasets: YFCC100M and Instagram.
 |Instagram|48,888|2,303|12,194|2,048|128|100|
 
 -`train.npy`  
-   Train file. Each line is a user with her/his positive interactions with items: (userID and micro-video ID)  
+   Train file. Each line is a user with her/his hashtag towards the micro-video: (userID, Hashtag ID and micro-video ID)  
 -`val.npy`  
-   Validation file. Each line is a user with her/his 1,000 negative and several positive interactions with items: (userID and micro-video ID)  
+   Validation file. Each line is a user with her/his 1,000 negative hashtags and several positive hashtags for a micro-video: (userID, Neg_Hashtag ID, Pos_Hashtag ID, and micro-video ID)  
 -`test.npy`  
-   Test file. Each line is a user with her/his 1,000 negative and several positive interactions with items: (userID and micro-video ID) 
+   Test file. Each line is a user with her/his 1,000 negative hashtags and several positive hashtags for a micro-video: (userID, Neg_Hashtag ID, Pos_Hashtag ID, and micro-video ID) 
