@@ -37,29 +37,20 @@ class Net(torch.nn.Module):
         self.con_1 = GATConv(self.dim_latent, self.dim_latent, heads=num_heads, concat=False)
         nn.init.xavier_normal_(self.con_1.weight) 
         self.bn1 = nn.BatchNorm1d(self.dim_latent)     
-        # self.con_2 = GATConv(self.dim_latent, self.dim_latent, heads=num_heads, concat=False)
-        # nn.init.xavier_normal_(self.con_2.weight)
         self.con_3 = SAGEConv(self.dim_latent, self.dim_latent, self.aggr)
-        nn.init.xavier_normal_(self.con_3.weight)
-        self.bn2 = nn.BatchNorm1d(self.dim_latent)     
+        nn.init.xavier_normal_(self.con_3.weight)   
 
         self.con_4 = GATConv(self.dim_latent, self.dim_latent, heads=num_heads, concat=False)
         self.bn3 = nn.BatchNorm1d(self.dim_latent)     
         nn.init.xavier_normal_(self.con_4.weight)      
-        # self.con_5 = GATConv(self.dim_latent, self.dim_latent, heads=num_heads, concat=False)
-        # nn.init.xavier_normal_(self.con_5.weight)
         self.con_6 = SAGEConv(self.dim_latent, self.dim_latent, self.aggr)
-        nn.init.xavier_normal_(self.con_6.weight)     
-        self.bn4 = nn.BatchNorm1d(self.dim_latent)     
+        nn.init.xavier_normal_(self.con_6.weight)      
 
         self.con_7 = GATConv(self.dim_latent, self.dim_latent, heads=num_heads, concat=False)
         nn.init.xavier_normal_(self.con_7.weight)      
         self.bn5 = nn.BatchNorm1d(self.dim_latent)     
-        # self.con_8 = GATConv(self.dim_latent, self.dim_latent, heads=num_heads, concat=False)
-        # nn.init.xavier_normal_(self.con_8.weight)
         self.con_9 = SAGEConv(self.dim_latent, self.dim_latent, self.aggr)
-        nn.init.xavier_normal_(self.con_9.weight)
-        self.bn6 = nn.BatchNorm1d(self.dim_latent)      
+        nn.init.xavier_normal_(self.con_9.weight)     
 
         self.weight_v = nn.init.xavier_normal_(torch.rand((self.dim_latent, self.dim_latent), requires_grad=True)).cuda()
         self.weight_h = nn.init.xavier_normal_(torch.rand((self.dim_latent, self.dim_latent), requires_grad=True)).cuda()
@@ -83,15 +74,12 @@ class Net(torch.nn.Module):
         x =  F.normalize(x)
 
         x = F.leaky_relu(self.bn1(self.con_1(x, self.v_uh_edge_index)))
-        # x = F.leaky_relu(self.con_2(x, self.v_h_edge_index))
         x = F.leaky_relu(self.bn2(self.con_3(x, self.uh_edge_index)))
 
         x = F.leaky_relu(self.bn3(self.con_4(x, self.v_uh_edge_index)))
-        # x = F.leaky_relu(self.con_5(x, self.v_h_edge_index))
         x = F.leaky_relu(self.bn4(self.con_6(x, self.uh_edge_index)))
         
         x = F.leaky_relu(self.bn5(self.con_7(x, self.v_uh_edge_index)))
-        # x = F.leaky_relu(self.con_8(x, self.v_h_edge_index))
         x = F.leaky_relu(self.bn6(self.con_9(x, self.uh_edge_index)))
 
         self.result_embed = x[torch.arange(self.num_user+self.num_hashtag).cuda()]
