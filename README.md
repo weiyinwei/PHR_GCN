@@ -42,7 +42,7 @@ Baselines:
 ## Dataset
 We provide two processed datasets: YFCC100M and Instagram.  
 - You can find the full version of dataset via [YFCC100M](https://multimediacommons.wordpress.com/yfcc100m-core-dataset/) and raw data [Instagram]().
-- We select some users and micro-videos and extract the visual, acoustic, and textual features of micro-video in [YFCC100M](https://drive.google.com/open?id=1Xk-ofNoDnwcZg_zYE5tak9s1iW195kY2) and [Instagram](https://drive.google.com/open?id=1I1cHf9TXY88SbVCDhRiJV1drWX5Tc1-8) datasets.
+- We select some users and micro-videos and extract the visual, acoustic, and textual features of micro-video.
 
 ||#Micro-video|#User|#Hashtag|Visual|Acoustic|Textual|
 |:-|:-|:-|:-|:-|:-|:-|
