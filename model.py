@@ -143,21 +143,6 @@ class Net(torch.nn.Module):
             pos_scores = torch.sum(user_specific_video*user_specific_pos_h, dim=1)
             neg_scores = torch.sum(user_specific_video*user_specific_neg_h, dim=1)
 
-            _, index_of_rank_list = torch.topk(torch.cat((neg_scores, pos_scores)), topk)
-            index_set = set([iofr.cpu().item() for iofr in index_of_rank_list])
-            num_hit = len(index_set.difference(all_set))
-            # print(num_hit)
-            sum_pre += float(num_hit/topk)
-            sum_recall += float(num_hit/num_pos)
-            # print(num_pos)
-            ndcg_score = 0.0
-            for i in range(num_pos):
-                label_pos = neg_num + i
-                if label_pos in index_of_rank_list:
-                    index = list(index_of_rank_list.cpu().numpy()).index(label_pos)
-                    ndcg_score = ndcg_score + math.log(2) / math.log(index + 2)
-            sum_ndcg += ndcg_score/num_pos
-            # print(sum_ndcg, sum_item)
         bar.close()
 
-        return sum_pre/sum_item, sum_recall/sum_item, sum_ndcg/sum_item
+        return sum_pre/sum_item, sum_recall/sum_item
