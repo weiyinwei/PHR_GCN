@@ -37,13 +37,13 @@ class PHR:
         self.num_heads = args.num_heads
         ##########################################################################################################################################
         print('Data loading ...')
-        path = '/home/share/weiyinwei/YFCC100M/'
+        path = '/YFCC100M/'
         self.v_feat = np.load(path+'FeatureVideo_normal.npy', allow_pickle=True)
         self.a_feat = np.load(path+'FeatureAudio_avg_normal.npy', allow_pickle=True)
         self.t_feat = np.load(path+'FeatureText_normal.npy', allow_pickle=True)
         self.features = np.concatenate((self.v_feat, self.a_feat, self.t_feat), axis=1)
         ##########################################################################################################################################
-        self.train_dataset = BaseDataset('/home/weiyinwei/Hashtag_recom/Data/', 'train.npy') 
+        self.train_dataset = BaseDataset('/Data/', 'train.npy') 
         self.train_dataloader = DataLoader(self.train_dataset, batch_size=self.batch_size, shuffle=True, num_workers=self.num_workers)
         self.num_user, self.num_hashtag, self.num_video = self.train_dataset.get_num()
 
@@ -122,7 +122,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--no-cuda', action='store_true', default=False, help='Disables CUDA training.')
     parser.add_argument('--model_name', default='Net', help='Model name.')
-    parser.add_argument('--data_path', default='amazon-book', help='Dataset path')
+    parser.add_argument('--data_path', default='', help='Dataset path')
     parser.add_argument('--PATH_weight_load', default=None, help='Loading weight filename.')
     parser.add_argument('--PATH_weight_save', default=None, help='Writing weight filename.')
     parser.add_argument('--l_r', type=float, default=1e-3, help='Learning rate.')
