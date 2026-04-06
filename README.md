@@ -1,18 +1,19 @@
 # Personalized Hashtag Recommendation for Micro-videos
 
 > A novel Graph Convolution Network based Personalized Hashtag Recommendation (GCN-PHR) model, which leverages GCN techniques and attention mechanism to model complicated interactions among <users, hashtags, micro-videos>.
+---
 
 ## Authors
 
-**Yinwei Wei**<sup>1</sup>, **Xiang Wang**<sup>2</sup>, **Liqiang Nie**<sup>1</sup>\*, **Xiangnan He**<sup>3</sup>, **Richang Hong**<sup>4</sup>, **Tat-Seng Chua**<sup>2</sup>
+**Yinwei Wei**<sup>1</sup>, **Zhiyong Cheng**<sup>2</sup>, **Xuzheng Yu**<sup>1</sup>, **Zhou Zhao**<sup>3</sup>, **Lei Zhu**<sup>4</sup>, **Liqiang Nie**<sup>1</sup>\*
 
 <sup>1</sup> Shandong University, China  
-<sup>2</sup> National University of Singapore, Singapore  
-<sup>3</sup> University of Science and Technology of China, China  
-<sup>4</sup> Hefei University of Technology, China  
+<sup>2</sup> Qilu University of Technology (Shandong Academy of Sciences), China  
+<sup>3</sup> Zhejiang University, China  
+<sup>4</sup> Shandong Normal University, China  
 \* Corresponding author
 
-
+---
 ## Links
 
 - **Paper**: [`ACM MM'19`](https://dl.acm.org/doi/abs/10.1145/3343031.3350858)
