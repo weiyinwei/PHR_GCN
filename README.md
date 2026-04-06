@@ -4,9 +4,14 @@
 
 ## Authors
 
-**Yinwei Wei**\*, **Zhiyong Cheng**, **Xuzheng Yu**, **Zhou Zhao**, **Lei Zhu**, **Liqiang Nie**
+**Yinwei Wei**<sup>1</sup>, **Xiang Wang**<sup>2</sup>, **Liqiang Nie**<sup>1</sup>\*, **Xiangnan He**<sup>3</sup>, **Richang Hong**<sup>4</sup>, **Tat-Seng Chua**<sup>2</sup>
 
-\* Corresponding author (weiyinwei at hotmail.com)
+<sup>1</sup> Shandong University, China  
+<sup>2</sup> National University of Singapore, Singapore  
+<sup>3</sup> University of Science and Technology of China, China  
+<sup>4</sup> Hefei University of Technology, China  
+\* Corresponding author
+
 
 ## Links
 
